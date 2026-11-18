@@ -1,5 +1,6 @@
 *{
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body{
@@ -16,18 +17,18 @@ body{
 
 .navtext{
     display: flex;
-    gap: 40px;
+    gap: 200px;
 }
 
 
 .navtext a{
+    margin-left: 100px;
     text-align: center;
-    padding-left: 200px;
+    padding-left: 0;
     flex: left;
     font-size: 1.4rem;
     font-family: sans-serif;
     text-decoration: none;
-    letter-spacing: normal;
     color: gray;
     transition: transform 0.1s ease-in-out;
 }
