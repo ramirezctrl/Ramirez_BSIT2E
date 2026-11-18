@@ -1,0 +1,39 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #242424 0%, #121212 50%, #000 100%);
+    color: white;
+}
+
+.navbar{
+    background-color: black;
+    padding: 25px;
+}
+
+.navtext{
+    display: flex;
+    gap: 40px;
+}
+
+
+.navtext a{
+    text-align: center;
+    padding-left: 200px;
+    flex: left;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    letter-spacing: normal;
+    color: gray;
+    transition: transform 0.1s ease-in-out;
+}
+
+.navbar a:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
