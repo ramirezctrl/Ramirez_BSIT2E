@@ -54,6 +54,7 @@ body{
     font-size: 5rem;
     text-align: center;
     letter-spacing: 0.1rem;
+    color: #1ed760;
 }
 
 .content1 .par{
@@ -124,6 +125,7 @@ body{
     position: static;
     margin-top: 150px;
     width: 250px;
+    color: #1ed760;
 }
 
 .content2 .Me{
@@ -139,4 +141,104 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5px;
     color: white;
+}
+
+.content3{
+    background-color: rgb(22, 22, 22);
+    float: left;
+    border-radius: 15px;
+    width: 1650px;
+    height: 750px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+}
+
+
+
+.music-menu {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.music-header {
+    margin-top: 200px;
+    margin-bottom: 32px;
+}
+
+.music-label {
+    color: #1ed760;
+    font-size: 2.6rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+.music-header h2 {
+    margin: 8px 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.music-header > p:last-child,
+.track-info p {
+    color: #b3b3b3;
+}
+
+.track-list {
+    display: grid;
+    gap: 12px;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 56px minmax(140px, 1fr) minmax(220px, 320px);
+    align-items: center;
+    gap: 16px;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #242424;
+}
+
+.track-art {
+    display: grid;
+    width: 56px;
+    height: 56px;
+    place-items: center;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #1ed760, #176b3a);
+    color: #111;
+    font-size: 2rem;
+}
+
+.track-info h3,
+.track-info p {
+    margin: 0;
+}
+
+.track-info p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+}
+
+.track audio {
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .content3 {
+        padding: 28px 18px;
+    }
+
+    .track {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .track-art {
+        width: 48px;
+        height: 48px;
+    }
+
+    .track audio {
+        grid-column: 1 / -1;
+    }
 }
