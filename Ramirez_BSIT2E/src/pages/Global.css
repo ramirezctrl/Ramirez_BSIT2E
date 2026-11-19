@@ -46,6 +46,7 @@ body{
     height: 780px;
     margin-left: 15px;
     margin-right: 15px;
+    border: 1px solid #292929;
 }
 
 .content1 h1{
@@ -103,6 +104,7 @@ body{
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 25px;
+    border: 1px solid #292929;
 }
 
 .content2 img{
@@ -152,51 +154,59 @@ body{
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 25px;
+    border: 1px solid #292929;
 }
 
-
-
 .music-menu {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 150px;
 }
 
 .music-header {
-    margin-top: 200px;
     margin-bottom: 32px;
 }
 
 .music-label {
+    margin: 0 0 10px;
     color: #1ed760;
-    font-size: 2.6rem;
-    font-weight: bold;
-    letter-spacing: 0.15rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.16rem;
 }
 
 .music-header h2 {
-    margin: 8px 0;
+    margin: 0;
     font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
 }
 
-.music-header > p:last-child,
-.track-info p {
+.music-header > p:last-child {
+    margin: 12px 0 0;
     color: #b3b3b3;
 }
 
 .track-list {
     display: grid;
-    gap: 12px;
+    gap: 8px;
 }
 
 .track {
     display: grid;
-    grid-template-columns: 56px minmax(140px, 1fr) minmax(220px, 320px);
+    grid-template-columns: 56px minmax(140px, 1fr) minmax(240px, 360px);
     align-items: center;
     gap: 16px;
     padding: 14px;
-    border-radius: 10px;
-    background-color: #242424;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: rgba(36, 36, 36, 0.9);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.track:hover {
+    border-color: #3a3a3a;
+    background-color: #2a2a2a;
 }
 
 .track-art {
@@ -204,10 +214,11 @@ body{
     width: 56px;
     height: 56px;
     place-items: center;
-    border-radius: 6px;
+    border-radius: 5px;
     background: linear-gradient(135deg, #1ed760, #176b3a);
     color: #111;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .track-info h3,
@@ -215,22 +226,132 @@ body{
     margin: 0;
 }
 
-.track-info p {
-    margin-top: 6px;
-    font-size: 0.9rem;
+.track-info h3 {
+    font-size: 1rem;
 }
 
-.track audio {
+.track-info p {
+    margin-top: 6px;
+    color: #b3b3b3;
+    font-size: 0.875rem;
+}
+
+.track-player {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 0 12px;
+}
+
+.play-button {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: #1ed760;
+    color: #121212;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.play-button::before {
+    width: 0;
+    height: 0;
+    margin-left: 3px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #121212;
+    content: "";
+}
+
+.play-button.is-playing::before {
+    width: 3px;
+    height: 14px;
+    margin-left: 0;
+    border: 0;
+    background: #121212;
+    box-shadow: 5px 0 #121212;
+}
+
+.play-button:hover {
+    transform: scale(1.07);
+    background: #3be477;
+}
+
+.play-button:focus-visible,
+.track-seek:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.track-playback {
+    min-width: 0;
+}
+
+.track-seek {
+    display: block;
     width: 100%;
+    height: 4px;
+    margin: 8px 0;
+    border-radius: 10px;
+    appearance: none;
+    background: linear-gradient(
+        to right,
+        #1ed760 0%,
+        #1ed760 var(--progress, 0%),
+        #535353 var(--progress, 0%),
+        #535353 100%
+    );
+    cursor: pointer;
+}
+
+.track-seek::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 50%;
+    appearance: none;
+    background: #fff;
+}
+
+.track-seek::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.track-times {
+    display: flex;
+    justify-content: space-between;
+    color: #b3b3b3;
+    font-size: 0.75rem;
+}
+
+.track-status {
+    grid-column: 2;
+    margin: 4px 0 0;
+    color: #ffb4ab;
+    font-size: 0.75rem;
+}
+
+.track-status:empty {
+    display: none;
 }
 
 @media (max-width: 700px) {
     .content3 {
+        width: calc(100% - 24px);
+        margin: 18px 12px;
         padding: 28px 18px;
     }
 
     .track {
-        grid-template-columns: 48px 1fr;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 12px;
     }
 
     .track-art {
@@ -238,7 +359,7 @@ body{
         height: 48px;
     }
 
-    .track audio {
+    .track-player {
         grid-column: 1 / -1;
     }
 }

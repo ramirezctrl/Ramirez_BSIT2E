@@ -18,46 +18,95 @@ After a few years, I moved over to FL Studio to take my music more seriously. Sw
 </div>
 
 <div class="content3">
-
   <section class="music-menu" aria-labelledby="music-title">
-
     <header class="music-header">
-
       <p class="music-label">My Works</p>
       <h2 id="music-title">Listen to my tracks</h2>
       <p>Choose a track and press play.</p>
-      
     </header>
 
     <div class="track-list">
       <article class="track">
-
-        <div class="track-art">L</div>
-
+        <div class="track-art" aria-hidden="true">L</div>
         <div class="track-info">
           <h3>Let Me Go</h3>
           <p>lunat1c</p>
         </div>
-
-        <audio controls preload="none">
-          <source src="/audio/track-one.mp3" type="audio/mpeg" />
-        </audio>
+        <div class="track-player">
+          <audio class="track-audio" src="/audio/track-one.mp3" preload="metadata"></audio>
+          <button class="play-button" type="button" aria-label="Play Let Me Go"></button>
+          <div class="track-playback">
+            <input class="track-seek" type="range" min="0" max="100" value="0" aria-label="Seek in Let Me Go" />
+            <div class="track-times">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+          <p class="track-status" role="status" aria-live="polite"></p>
+        </div>
       </article>
 
       <article class="track">
-
-        <div class="track-art">L</div>
-
+        <div class="track-art" aria-hidden="true">L</div>
         <div class="track-info">
           <h3>Fashion</h3>
           <p>lunat1c</p>
         </div>
-
-        <audio controls preload="none">
-          <source src="/audio/track-two.mp3" type="audio/mpeg" />
-        </audio>
+        <div class="track-player">
+          <audio class="track-audio" src="/audio/track-two.mp3" preload="metadata"></audio>
+          <button class="play-button" type="button" aria-label="Play Fashion"></button>
+          <div class="track-playback">
+            <input class="track-seek" type="range" min="0" max="100" value="0" aria-label="Seek in Fashion" />
+            <div class="track-times">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+          <p class="track-status" role="status" aria-live="polite"></p>
+        </div>
       </article>
-      
+
+      <article class="track">
+        <div class="track-art" aria-hidden="true">v</div>
+        <div class="track-info">
+          <h3>Why</h3>
+          <p>vvyxn/prod.lunat1c</p>
+        </div>
+        <div class="track-player">
+          <audio class="track-audio" src="/audio/track-3.mp3" preload="metadata"></audio>
+          <button class="play-button" type="button" aria-label="Play Why"></button>
+          <div class="track-playback">
+            <input class="track-seek" type="range" min="0" max="100" value="0" aria-label="Seek in Why" />
+            <div class="track-times">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+          <p class="track-status" role="status" aria-live="polite"></p>
+        </div>
+      </article>
+
+      <article class="track">
+        <div class="track-art" aria-hidden="true">Z</div>
+        <div class="track-info">
+          <h3>fixated freestyle</h3>
+          <p>Zapes/prod.lunat1c</p>
+        </div>
+        <div class="track-player">
+          <audio class="track-audio" src="/audio/track-4.mp3" preload="metadata"></audio>
+          <button class="play-button" type="button" aria-label="Play fixated freestyle"></button>
+          <div class="track-playback">
+            <input class="track-seek" type="range" min="0" max="100" value="0" aria-label="Seek in fixated freestyle" />
+            <div class="track-times">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+          <p class="track-status" role="status" aria-live="polite"></p>
+        </div>
+      </article>
     </div>
   </section>
 </div>
+
+<script src="../../scripts/java.ts"></script>
