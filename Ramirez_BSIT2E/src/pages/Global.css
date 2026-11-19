@@ -8,7 +8,10 @@ body{
     min-height: 100vh;
     margin: 0;
     color: white;
+    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
 }
+
+
 
 .navbar{
     background-color: black;
@@ -27,7 +30,6 @@ body{
     padding-left: 0;
     flex: left;
     font-size: 1.4rem;
-    font-family: sans-serif;
     text-decoration: none;
     color: gray;
     transition: transform 0.1s ease-in-out;
@@ -50,7 +52,6 @@ body{
 }
 
 .content1 h1{
-    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 5rem;
     text-align: center;
@@ -63,7 +64,6 @@ body{
 .content1 .par{
     margin: auto;
     width: 400px;
-    font-family: Arial;
     font-size: 1.1rem;
     text-align: center;
     letter-spacing: 0.5px;
@@ -88,7 +88,6 @@ body{
 
 .content1 .par2{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
     width: 600px;
     margin-top: 125px;
@@ -122,7 +121,6 @@ body{
 }
 
 .content2 h1{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     margin-right: 25px;
     margin-left: 500px;
@@ -144,9 +142,9 @@ body{
 
 .content2 p{
     font-size: 1.4rem;
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5px;
     color: white;
+    line-height: 1.1;
 }
 
 .content3{
@@ -164,7 +162,6 @@ body{
 .music-menu {
     max-width: 1000px;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 150px;
 }
 
@@ -367,3 +364,4 @@ body{
         grid-column: 1 / -1;
     }
 }
+
