@@ -11,8 +11,6 @@ body{
     font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-
-
 .navbar{
     position: relative;
     display: flex;
@@ -22,12 +20,10 @@ body{
     padding: 25px;
 }
 
-
 .navtext{
     display: flex;
     gap: clamp(24px, 8vw, 250px);
 }
-
 
 .hamburger{
     display: none;
@@ -127,7 +123,6 @@ body{
     width: 815px;
 }
 
-
 .content1 img{
     margin-top: 550px;
     margin-left: 165px;
@@ -144,9 +139,8 @@ body{
 .content1 img:hover{
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.7),
                 0 0 24px rgba(255, 255, 255, 0.4);
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
-
 
 .content1 .par2{
     color: white;
@@ -186,7 +180,7 @@ body{
 .content2 img:hover{
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.7),
                 0 0 24px rgba(255, 255, 255, 0.4);
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
 
 .content2 h1{
@@ -229,17 +223,16 @@ body{
     border: 1px solid #292929;
 }
 
-.music-menu {
+.music-menu{
     max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 150px;
+    margin: 150px auto 0;
 }
 
-.music-header {
+.music-header{
     margin-bottom: 32px;
 }
 
-.music-label {
+.music-label{
     margin: 0 0 10px;
     color: #1ed760;
     font-size: 3rem;
@@ -247,23 +240,23 @@ body{
     letter-spacing: 0.16rem;
 }
 
-.music-header h2 {
+.music-header h2{
     margin: 0;
     font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.1;
 }
 
-.music-header > p:last-child {
+.music-header > p:last-child{
     margin: 12px 0 0;
     color: #b3b3b3;
 }
 
-.track-list {
+.track-list{
     display: grid;
     gap: 8px;
 }
 
-.track {
+.track{
     display: grid;
     grid-template-columns: 56px minmax(140px, 1fr) minmax(240px, 360px);
     align-items: center;
@@ -275,12 +268,12 @@ body{
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.track:hover {
+.track:hover{
     border-color: #3a3a3a;
     background-color: #2a2a2a;
 }
 
-.track-art {
+.track-art{
     display: grid;
     width: 56px;
     height: 56px;
@@ -293,28 +286,28 @@ body{
 }
 
 .track-info h3,
-.track-info p {
+.track-info p{
     margin: 0;
 }
 
-.track-info h3 {
+.track-info h3{
     font-size: 1rem;
 }
 
-.track-info p {
+.track-info p{
     margin-top: 6px;
     color: #b3b3b3;
     font-size: 0.875rem;
 }
 
-.track-player {
+.track-player{
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
     align-items: center;
     gap: 0 12px;
 }
 
-.play-button {
+.play-button{
     display: grid;
     width: 42px;
     height: 42px;
@@ -327,7 +320,7 @@ body{
     transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
-.play-button::before {
+.play-button::before{
     width: 0;
     height: 0;
     margin-left: 3px;
@@ -337,7 +330,7 @@ body{
     content: "";
 }
 
-.play-button.is-playing::before {
+.play-button.is-playing::before{
     width: 3px;
     height: 14px;
     margin-left: 0;
@@ -346,22 +339,22 @@ body{
     box-shadow: 5px 0 #121212;
 }
 
-.play-button:hover {
+.play-button:hover{
     transform: scale(1.07);
     background: #3be477;
 }
 
 .play-button:focus-visible,
-.track-seek:focus-visible {
+.track-seek:focus-visible{
     outline: 2px solid #fff;
     outline-offset: 3px;
 }
 
-.track-playback {
+.track-playback{
     min-width: 0;
 }
 
-.track-seek {
+.track-seek{
     display: block;
     width: 100%;
     height: 4px;
@@ -378,7 +371,7 @@ body{
     cursor: pointer;
 }
 
-.track-seek::-webkit-slider-thumb {
+.track-seek::-webkit-slider-thumb{
     width: 12px;
     height: 12px;
     border: 0;
@@ -387,7 +380,7 @@ body{
     background: #fff;
 }
 
-.track-seek::-moz-range-thumb {
+.track-seek::-moz-range-thumb{
     width: 12px;
     height: 12px;
     border: 0;
@@ -395,44 +388,22 @@ body{
     background: #fff;
 }
 
-.track-times {
+.track-times{
     display: flex;
     justify-content: space-between;
     color: #b3b3b3;
     font-size: 0.75rem;
 }
 
-.track-status {
+.track-status{
     grid-column: 2;
     margin: 4px 0 0;
     color: #ffb4ab;
     font-size: 0.75rem;
 }
 
-.track-status:empty {
+.track-status:empty{
     display: none;
-}
-
-@media (max-width: 700px) {
-    .content3 {
-        width: calc(100% - 24px);
-        margin: 18px 12px;
-        padding: 28px 18px;
-    }
-
-    .track {
-        grid-template-columns: 48px minmax(0, 1fr);
-        gap: 12px;
-    }
-
-    .track-art {
-        width: 48px;
-        height: 48px;
-    }
-
-    .track-player {
-        grid-column: 1 / -1;
-    }
 }
 
 .content4{
@@ -464,7 +435,6 @@ body{
     font-size: 2rem;
     font-weight: 700;
     margin-top: 75px;
-    
 }
 
 .content4 a{
@@ -485,7 +455,6 @@ body{
     text-align: center;
 }
 
-
 .content5{
     background-color: rgb(22, 22, 22);
     float: left;
@@ -498,16 +467,16 @@ body{
 }
 
 @media (max-width: 700px) {
-    .navbar {
+    .navbar{
         display: block;
         padding: 18px;
     }
 
-    .hamburger {
+    .hamburger{
         display: flex;
     }
 
-    .navtext {
+    .navtext{
         display: flex;
         max-height: 0;
         opacity: 0;
@@ -521,14 +490,14 @@ body{
                     transform 0.35s ease, visibility 0.35s;
     }
 
-    .navbar.menu-open .navtext {
+    .navbar.menu-open .navtext{
         max-height: 260px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    .navtext a {
+    .navtext a{
         margin: 0;
         padding: 14px 0;
         text-align: left;
@@ -537,7 +506,7 @@ body{
     .content1,
     .content2,
     .content3,
-    .content4 {
+    .content4{
         float: none;
         width: calc(100% - 24px);
         height: auto;
@@ -547,85 +516,85 @@ body{
 
     .content1 h1,
     .content2 h1,
-    .content4 h1 {
+    .content4 h1{
         width: auto;
         margin: 24px 18px;
         font-size: 3rem;
         letter-spacing: 0;
     }
 
-    .btn a {
+    .btn a{
         width: 220px;
         height: 64px;
         margin: 24px auto;
     }
 
-    .content1 .img-link {
+    .content1 .img-link{
         float: none;
         width: 100%;
     }
 
-    .content1 img {
+    .content1 img{
         width: calc(100% - 36px);
         height: auto;
         margin: 24px 18px;
     }
 
-    .content1 .par2 {
+    .content1 .par2{
         float: none;
         width: calc(100% - 36px);
         margin: 24px 18px;
         font-size: 1.1rem;
     }
 
-    .content2 img {
+    .content2 img{
         float: none;
         width: calc(100% - 36px);
         height: auto;
         margin: 24px 18px;
     }
 
-    .content2 .Me {
+    .content2 .Me{
         float: none;
         width: calc(100% - 36px);
         margin: 24px 18px;
     }
 
-    .content3 {
+    .content3{
         padding: 24px 18px;
     }
 
-    .music-menu {
+    .music-menu{
         margin-top: 24px;
     }
 
-    .music-header h2 {
+    .music-header h2{
         font-size: 2rem;
     }
 
-    .music-label {
+    .music-label{
         font-size: 2.25rem;
     }
 
-    .track {
+    .track{
         grid-template-columns: 48px minmax(0, 1fr);
         gap: 12px;
     }
 
-    .track-art {
+    .track-art{
         width: 48px;
         height: 48px;
     }
 
-    .track-player {
+    .track-player{
         grid-column: 1 / -1;
     }
 
-    .content4 h1 {
+    .content4 h1{
         margin-top: 48px;
     }
 
-    .content4 .contact {
+    .content4 .contact{
         margin-top: 48px;
     }
 }
