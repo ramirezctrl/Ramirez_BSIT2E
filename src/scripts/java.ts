@@ -75,3 +75,20 @@
       }
     });
   });
+
+  const scrollTopButton = document.querySelector<HTMLButtonElement>(".scroll-top");
+
+  const updateScrollTopButton = () => {
+    scrollTopButton?.classList.toggle("is-visible", window.scrollY > 300);
+  };
+
+  window.addEventListener("scroll", updateScrollTopButton, { passive: true });
+
+  scrollTopButton?.addEventListener("click", () => {
+    document.querySelector("#home")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  updateScrollTopButton();
