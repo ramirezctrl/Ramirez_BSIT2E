@@ -173,6 +173,13 @@ body{
     box-sizing: border-box;
 }
 
+.content6.portfolio-content{
+    width: min(calc(100% - 30px), 1650px);
+    margin-block: 25px;
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
 .content1 .img-link,
 .content6 .img-link{
     width: 100%;
@@ -629,6 +636,13 @@ body{
         padding: 24px 18px;
         margin-top: 0;
         min-height: auto;
+    }
+
+    .content6.portfolio-content{
+        width: calc(100% - 24px);
+        margin-block: 12px;
+        margin-inline: auto;
+        padding-bottom: 24px;
     }
 
     .content1 h1,
